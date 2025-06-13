@@ -1,0 +1,289 @@
+/* Reset and base styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000000;
+      color: #f0f0f0;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #202020;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+
+    nav ul li a {
+      color: #ebebeb;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      color: #e70a0a;
+      text-decoration: underline;
+      outline: none;
+    }
+
+    /* Top button in nav */
+    .nav-button {
+      background-color: #ff3939;
+      color: #ebebeb;
+      border: none;
+      padding: 0.5rem 1.2rem;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-button:hover,
+    .nav-button:focus {
+      background-color: #e70a0a;
+      color: #171717;
+      outline: none;
+    }
+
+    /* Sections */
+    section {
+      min-height: 100vh;
+      padding: 4rem 2rem 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Home Section */
+    #Home video{
+      flex-wrap: wrap;
+    }
+    #Home h1 {
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      letter-spacing: 2px;
+      word-spacing: 12px;
+      font-weight: 900;
+      font-size: 2.25rem;
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.2;
+    }
+
+    #Home h1 span {
+      color: #a31e1e;
+    }
+
+    #Home .category-button {
+      background-color: #ff3939;
+      color: #ebebeb;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    #Home .category-button:hover,
+    #Home .category-button:focus {
+      background-color: #e70a0a;
+      color: #171717;
+      outline: none;
+    }
+
+    /* About Section */
+    #About {
+      background-color: #121212;
+      padding-top: 6rem;
+    }
+
+    #About h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      color: #e70a0a;
+    }
+
+    .profile-icon {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 2rem;
+      stroke: #ff0000;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .about {
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ddd;
+      white-space: pre-line;
+    }
+
+    /* Tech stack badges container */
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      max-width: 700px;
+      margin: 0 auto;
+      padding-bottom: 3rem;
+    }
+
+    .badges img {
+      height: 32px;
+      border-radius: 6px;
+    }
+
+    /* Project Section */
+
+    #Project {
+      background-color: #121212 ;
+    }
+    
+    #Project h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      color: #e70a0a;
+      flex-wrap: wrap;
+    }
+
+    #Project .container {
+      max-width: 700px;
+      margin: 0 auto;
+      
+    }
+
+    #Project img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+      object-fit: contain;
+    }
+
+
+    
+
+    /* Contact Section */
+    #Contact {
+      padding-bottom: 6rem;
+      background-color: #121212;
+    }
+
+    #Contact h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      color: #e70a0a;
+    }
+
+    #Contact p,
+    #Contact a,
+    #Contact ul {
+      font-size: 1rem;
+      max-width: 700px;
+      margin: 0 auto 1rem;
+      color: #ddd;
+    }
+
+    #Contact a {
+      color: #ff3939;
+      text-decoration: none;
+    }
+
+    #Contact a:hover,
+    #Contact a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    #Contact ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0;
+      margin: 1rem 0 0;
+      flex-wrap: wrap;
+    }
+
+    #Contact ul li a {
+      color: #ff3939;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    #Contact ul li a:hover,
+    #Contact ul li a:focus {
+      color: #e70a0a;
+      outline: none;
+    }
+
+    /* Footer */
+    footer {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #171717;
+      color: #b4b4b4;
+      font-size: 0.9rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        gap: 1rem;
+        font-size: 1rem;
+      }
+
+      #Home h1 {
+        font-size: 1.75rem;
+        word-spacing: 8px;
+      }
+
+      .badges {
+        gap: 6px;
+      }
+    }
