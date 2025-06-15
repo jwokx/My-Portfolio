@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="style.css"/>
   <link rel="icon" href="logo1.jpg" type="image/x-icon">
   <link rel="icon" href="logo1.jpg" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -30,33 +35,29 @@
     <ul class="navar" id="navigation" role="navigation" aria-label="Primary Navigation">
       <li><a href="#Home">Home</a></li>
       <li><a href="#About">About</a></li>
+      <li><a href="#Services">Services</a></li>
       <li><a href="#Project">Project</a></li>
       <li><a href="#Contact">Contact</a></li>
     </ul>
   </nav>
+
   <section id="About" tabindex="-1" aria-labelledby="about-title">
-
-    
-
-    <h2 id="about-title">About</h2>
-    <div class="profile-icon" role="img" aria-label="Profile icon silhouette">
+    <h2 id="about-title" data-aos="zoom-in">ABOU<span>T</span></h2>
+    <div class="profile-icon" role="img" aria-label="Profile icon silhouette" data-aos="zoom-in">
       <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" stroke="currentColor" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
         <ellipse cx="32" cy="22" rx="10" ry="12" />
         <path d="M18 44 L46 44 L38 60 L26 60 Z" />
       </svg>
     </div>
-    <p class="about">
-      Fully committed to the philosophy of life-long learning, I’m a Junior Frontend Developer with a deep passion for creating visually appealing and user-friendly interfaces.
-      I believe that continuous improvement and curiosity are essential in the ever-evolving field of web development.
+    <p class="about" data-aos="zoom-in">
+      Fully committed to the philosophy of life-long learning, I’m Jazz S. Cometa, an 18-year-old Junior Frontend Developer with a deep passion for creating visually appealing and user-friendly interfaces. I believe that continuous improvement and curiosity are essential in the ever-evolving field of web development.
 
-      What excites me most is the unique blend of creativity, logic, and technology that web development offers.
-      The constant opportunity to explore new tools, frameworks, and design trends keeps me motivated and inspired to grow as a developer.
+What excites me most is the unique blend of creativity, logic, and technology that web development offers. The constant opportunity to explore new tools, frameworks, and design trends keeps me motivated and inspired to grow as a developer.
 
-      As a creative individual, I find joy in bringing ideas to life through both code and design.
-      Whether it's building sleek, responsive layouts or enhancing user experience through thoughtful design choices, I take pride in crafting digital experiences that are both functional and beautiful.
+As a creative individual, I find joy in bringing ideas to life through both code and design. Whether it's building sleek, responsive layouts or enhancing user experience through thoughtful design choices, I take pride in crafting digital experiences that are both functional and beautiful.
     </p>
-<h4>💻 Tech Stack</h4>
-    <div class="badges" aria-label="Technology stack badges">
+<h4 data-aos="zoom-in">💻 Tech Stack</h4>
+    <div class="badges" aria-label="Technology stack badges" data-aos="zoom-in">
       <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&amp;logo=javascript&amp;logoColor=%23F7DF1E" alt="JavaScript" />
       <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&amp;logo=html5&amp;logoColor=white" alt="HTML5" />
       <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&amp;logo=typescript&amp;logoColor=white" alt="TypeScript" />
@@ -71,38 +72,82 @@
     </div>
   </section>
 
+  <section id="Services" tabindex="-1" aria-labelledby="Services-title">
+  <h2 id="Services-title">SERVICES</h2>
+
+  <div class="services-container">
+
+    <div class="box1" data-aos="zoom-in">
+      <span data-aos="zoom-in">Frontend Dev</span><br>
+      I offer frontend dev services focused on creating attractive and responsive user interfaces. With experience in HTML, CSS, and JavaScript, I'm committed to ensuring every project not only looks great but also works smoothly across all devices and browsers.
+      <br>
+      <button onclick="location.href='#Project'" class="category-button" aria-label="See My Frontend Work">Show my work</button>
+    </div>
+
+    <div class="box2" data-aos="zoom-in">
+      <span data-aos="zoom-in" >UI/UX Design</span><br>
+      I provide professional UI/UX design services focused on intuitive, aesthetic, and functional user interfaces. I ensure designs that are visually appealing and effective in achieving your business goals for websites, mobile apps, and digital platforms.
+      <br>
+      <button onclick="location.href='#Project'" class="category-button" aria-label="See My Design Work">Show my work</button>
+    </div>
+
+    <div class="box3" data-aos="zoom-in">
+      <span data-aos="zoom-in">Graphic Design</span><br>
+      I provide creative graphic design services that bring your ideas to life as stunning visual pieces. Each design is not only aesthetic, but also effective in conveying your message. I’m ready to help you build a strong and memorable visual identity.
+      <br>
+      <button onclick="location.href='#Project'" class="category-button" aria-label="See My Graphic Design Work">Show my work</button>
+    </div>
+
+  </div>
+</section>
+
+
   <section id="Project" tabindex="-1" aria-labelledby="project-title">
-    <h2 id="project-title">Projects</h2>
+    <h2 id="project-title" data-aos="zoom-in">PROJECT</h2>
+    <h3 id="project-title" data-aos="zoom-in">FRONDTEND <span>SECTION</span>.</h3>
     <div class="container">
-      <a href="https://jwokx.github.io/DRAFTON/" target="_blank">
-      <img src="DRaft on.jpg" alt="Sample project work screenshot" />
+      <a href="https://jwokx.github.io/DRAFTON/" target="_blank" >
+      <img src="DRaft on.jpg" alt="Sample project work screenshot" data-aos="zoom-in">
       </a>
     </div>
-    <h3>DRAFT ON<br>Game Staion X Game Space </h3>
-    <p>
-      Full stack Website build to download your favorite  PC games,Offline games, & Mobile games on your pc where also at the same time your Game space.
+    <h5 data-aos="zoom-in">DRAFT ON<br>Game Staion X Game Space </h5>
+    <p data-aos="zoom-in">
+      Full stack Website build to download your favorite  PC games,Offline games, & Mobile games on your pc where also at the same time your Game space. ⚠️ This website is only accessible on desktop. Mobile phones and tablets are restricted by the owner. ⚠️
     </p>
+    <h3 id="project-title" data-aos="zoom-in">UI/UX DESIGN<span> SECTION</span>.</h3>
+    <p data-aos="zoom-in">🚧 Coming Soon – A new feature is on the way. Stay tuned for updates! 🚧</p>
+    <h3 id="project-title" data-aos="zoom-in">GRAPGHIC<span> SECTION</span>.</h3>
+    <p data-aos="zoom-in">🚧 Coming Soon – A new feature is on the way. Stay tuned for updates! 🚧</p>
   </section>
 
   <section id="Contact" tabindex="-1" aria-labelledby="contact-title">
-    <h2 id="contact-title">Contact</h2>
-    <p>Email: <a href="mailto:jazzcometa11@gmail.com">jazzcometa11@gmail.com</a></p>
-    <p>Phone: 09854489454</p>
-    <p>Location: Pulpogan, Consolacion, Cebu</p>
+  <h2 id="contact-title">CONTACT</h2>
+  <p>Email: <a href="mailto:jazzcometa11@gmail.com">jazzcometa11@gmail.com</a></p>
+  <p>Phone: 09854489454</p>
+  <p>Location: Pulpogan, Consolacion, Cebu</p>
 
-    <h3>Social Links</h3>
-    <ul>
-      <li><a href="https://www.tiktok.com/@draftonx" target="_blank" rel="noopener noreferrer">TikTok</a></li>
-      <li><a href="https://www.instagram.com/jazzscometa" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-      <li><a href="https://www.facebook.com/jash.cometa.5" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-      <li><a href="https://twitter.com/cometa jaz" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
-    </ul>
-  </section>
+  <h3>Social Links</h3>
+  <div class="social-icons">
+    <a href="https://www.tiktok.com/@draftonx" target="_blank" aria-label="TikTok" class="icon tiktok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.instagram.com/jazzscometa" target="_blank" aria-label="Instagram" class="icon instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/jash.cometa.5" target="_blank" aria-label="Facebook" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com/cometajaz" target="_blank" aria-label="X (Twitter)" class="icon x"><i class="fab fa-x-twitter"></i></a>
+  </div>
+</section>
+
 
   <footer>
     JAZZ COMETA &copy; 2025. All rights reserved.
   </footer>
+
+  <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init(); // initialize animation
+</script>
+
 </body>
 </html>
+
 
 
