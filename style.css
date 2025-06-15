@@ -3,6 +3,19 @@
       box-sizing: border-box;
     }
 
+    .goldman-regular {
+  font-family: "Goldman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.goldman-bold {
+  font-family: "Goldman", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
     body {
       background-color: #000000;
       color: #f0f0f0;
@@ -38,6 +51,7 @@
       gap: 2rem;
       font-weight: 900;
       font-size: 1.1rem;
+      flex-wrap: wrap;
     }
 
     nav ul li a {
@@ -49,9 +63,9 @@
 
     nav ul li a:hover,
     nav ul li a:focus {
-      color: #e70a0a;
-      text-decoration: underline;
+      color: #ffffff;
       outline: none;
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff000069, 0 0 30px #ff1b1b;
     }
 
     /* Sections */
@@ -72,7 +86,7 @@
     }
     #Home h1 {
       color: #ffffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Goldman ,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       letter-spacing: 2px;
       word-spacing: 12px;
       font-weight: 900;
@@ -199,8 +213,16 @@
       margin-bottom: 1.5rem;
       color: #e70a0a;
       flex-wrap: wrap;
+      animation: slideFromRight 1s ease forwards;
+  animation-delay: 0.9s;
     }
 
+    #Project h3 {
+color: rgb(255, 255, 255);
+    }
+#Project h3 span{
+      color: #e70a0a;
+    }
     #Project .container {
       max-width: 700px;
       margin: 0 auto;
@@ -215,7 +237,130 @@
       object-fit: contain;
     }
 
+    /* services Section */
 
+    #Services {
+      background-color: #121212 ;
+      align-items: center;
+      flex-wrap: wrap;
+      display: flex;
+    }
+    
+    .services-container {
+  display: flex;
+  flex-direction: row-reverse; /* Right to left on desktop */
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* allow wrapping */
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column; /* stack top to bottom */
+    align-items: center; /* center boxes */
+  }
+}
+
+    
+
+#Services h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      color: #e70a0a;
+      animation: slideFromRight 1s ease forwards;
+  animation-delay: 0.9s;
+
+    }
+
+
+    #Services .box1 {
+      width: 300px;
+      height: 300px;
+      border-color: #ff0000;
+      background-color: #252525;
+      margin: 10px,10px;
+      padding: 5px,5px;
+       padding: 20px;
+       
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  text-align: center;
+  font-family: 'Orbitron', sans-serif; /* Optional digital style */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.9s;
+    }
+    #Services .box1 span{
+      font-weight: 900; 
+    }
+
+    #Services .box2 {
+      width: 300px;
+      height: 300px;
+      border-color: #ff0000;
+      background-color: #494949;
+      margin: 10px,10px;
+      padding: 5px,5px;
+      padding: 20px;
+      border-radius: 8px;
+
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  text-align: center;
+  font-family: 'Orbitron', sans-serif; /* Optional digital style */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.9s;
+    }
+
+    #Services .box2 span{
+      font-weight: 900; 
+    }
+
+    #Services .box3 {
+      width: 300px;
+      height: 300px;
+      border-color: #ff0000;
+      background-color: #7e7e7e;
+      margin: 10px,10px;
+      padding: 5px,5px;
+      padding: 20px;
+      border-radius: 8px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  text-align: center;
+  font-family: 'Orbitron', sans-serif; /* Optional digital style */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.9s;
+    }
+
+    #Services .box3 span{
+      font-weight: 900; 
+    }
+
+     #Services .category-button {
+      background-color: #171717;      
+  color: #ebebeb;                
+  border: 2px solid #ff3939;      
+  padding: 0.50rem 1rem;
+  font-weight: 100;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.9s; 
+
+}
+    #Services .category-button:hover,
+    #Services .category-button:focus {
+     background-color: #e70a0a;      
+  color: #171717;                 
+  border-color: #e70a0a;          
+  outline: none;
+}
     
 
     /* Contact Section */
@@ -229,6 +374,8 @@
       font-weight: 800;
       margin-bottom: 1.5rem;
       color: #e70a0a;
+      animation: slideFromRight 1s ease forwards;
+  animation-delay: 0.9s;
     }
 
     #Contact p,
@@ -273,6 +420,29 @@
       color: #e70a0a;
       outline: none;
     }
+
+    .social-icons {
+  display: flex;
+  gap: 20px;
+  padding: 15px 0;
+}
+
+.social-icons .icon {
+  font-size: 24px;
+  color: white;
+  background-color: #111;
+  padding: 14px;
+  border-radius: 20%;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-icons .icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgb(255, 0, 0);
+}
+
+
 
      /* Responsive */
     @media (max-width: 768px) {
