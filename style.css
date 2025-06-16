@@ -83,7 +83,12 @@
     /* Home Section */
     #Home video{
       flex-wrap: wrap;
+      animation: slideFromRight 2s ease forwards;
+     
     }
+
+ 
+
     #Home h1 {
       color: #ffffff;
       font-family: Goldman ,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -95,8 +100,10 @@
       margin: 0 auto 2.5rem;
       line-height: 1.2;
       animation: slideFromRight 1s ease forwards;
-  animation-delay: 0.9s; 
+      animation-delay:0s ;
+      transition: all 0.3s ease;
     }
+
 
     @keyframes slideFromRight {
   0% {
@@ -111,7 +118,32 @@
 
     #Home h1 span {
       color: #a31e1e;
+       animation: 
+    typing 3s steps(30, end) forwards,
+    blinkCaret 0.7s step-end infinite;
+    animation-delay:0s ;
     }
+
+
+    @keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blinkCaret {
+  0%, 100% { border-color: transparent }
+  50% { border-color: black }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blinkCaret {
+  0%, 100% { border-color: transparent }
+  50% { border-color: black }
+}
 
     #Home .category-button {
       background-color: #171717;      
@@ -124,8 +156,7 @@
   transition: all 0.3s ease;
   opacity: 0;
   animation: fadeInUp 1s ease forwards;
-  animation-delay: 0.9s; 
-
+  animation-delay:0s ;
 }
     #Home .category-button:hover,
     #Home .category-button:focus {
