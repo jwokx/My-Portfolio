@@ -16,18 +16,20 @@
 }
 
 
-    body {
-      background-color: #000000;
-      color: #f0f0f0;
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      overflow-x: hidden;
-      line-height: 1.5;
-    }
+  body {
+ 
+  margin: 0;
+  padding: 0;
+  color: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
 
     html {
       scroll-behavior: smooth;
     }
+
+    
 
     /* Navigation */
     nav {
@@ -81,28 +83,32 @@
     }
 
     /* Home Section */
-    #Home video{
-      flex-wrap: wrap;
-      animation: slideFromRight 2s ease forwards;
-     
-    }
-
- 
-
+  
+    #Home {
+  background-image: url('1329177.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: none;
+  min-height: 100vh; /* this makes it fullscreen */
+}
+   
     #Home h1 {
-      color: #ffffff;
-      font-family: Goldman ,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      letter-spacing: 2px;
-      word-spacing: 12px;
-      font-weight: 900;
-      font-size: 2.25rem;
-      max-width: 600px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.2;
-      animation: slideFromRight 1s ease forwards;
-      animation-delay:0s ;
-      transition: all 0.3s ease;
-    }
+  color: #ffffff;
+  font-family: Goldman, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 12px;
+  font-weight: 900;
+  font-size: 4rem;          
+  max-width: 1000px;           
+  margin: 0 auto 2.5rem;
+  line-height: 1.2;
+  text-align: center;         
+  animation: slideFromRight 1s ease forwards;
+  animation-delay: 0s;
+  transition: all 0.3s ease;
+  word-break: break-word;
+}
 
 
     @keyframes slideFromRight {
@@ -190,7 +196,7 @@
       font-size: 2rem;
       font-weight: 800;
       margin-bottom: 1.5rem;
-      color: #e70a0a;
+      color: #ffffff;
       animation: slideFromRight 1s ease forwards;
   animation-delay: 0.9s;
     }
@@ -200,6 +206,7 @@
       height: 120px;
       margin: 0 auto 2rem;
       stroke: #ff0000;
+      color: #ff0000 ;
       stroke-width: 2;
       fill: none;
       animation: fadeInUp 1s ease forwards;
@@ -236,38 +243,131 @@
 
     #Project {
       background-color: #121212 ;
+      align-items: center;
+      flex-wrap: wrap;
+      display: flex;
     }
-    
+
     #Project h2 {
       font-size: 2rem;
       font-weight: 800;
       margin-bottom: 1.5rem;
-      color: #e70a0a;
-      flex-wrap: wrap;
+      color: #ffffff;
       animation: slideFromRight 1s ease forwards;
-  animation-delay: 0.9s;
+      animation-delay: 0.9s;
     }
 
     #Project h3 {
-color: rgb(255, 255, 255);
+      color: white;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: 1.5rem;
     }
-#Project h3 span{
+
+    #Project h3 span {
       color: #e70a0a;
     }
-    #Project .container {
-      max-width: 700px;
-      margin: 0 auto;
-      
+
+   #Project .container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* All images normally no blur */
+#Project .container img {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+#Project .container img:hover {
+  transform: scale(1.25);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
+  filter: none; 
+}
+
+
+#Project .container:hover img:not(:hover) {
+  filter: blur(3px);
+  transition: filter 0.3s ease;
+}
+
+    @keyframes slideFromRight {
+      0% {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
-    #Project img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.7);
-      object-fit: contain;
-    }
 
+    #lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+#lightbox-modal .close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+  transition: color 0.3s ease;
+}
+
+#lightbox-modal .close:hover {
+  color: #ff0000;
+}
+
+
+#Project h5 a {
+  color: #ff3939;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+  font-size: larger ;
+}
+
+#Project h5 a:hover,
+#Project h5 a:focus {
+  color: #ffffff;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000aa;
+  outline: none;
+}
+
+
+    
+    
     /* services Section */
 
     #Services {
@@ -300,7 +400,7 @@ color: rgb(255, 255, 255);
       font-size: 2rem;
       font-weight: 800;
       margin-bottom: 1.5rem;
-      color: #e70a0a;
+      color: #ffffff;
       animation: slideFromRight 1s ease forwards;
   animation-delay: 0.9s;
 
@@ -404,7 +504,7 @@ color: rgb(255, 255, 255);
       font-size: 2rem;
       font-weight: 800;
       margin-bottom: 1.5rem;
-      color: #e70a0a;
+      color: #ffffff;
       animation: slideFromRight 1s ease forwards;
   animation-delay: 0.9s;
     }
