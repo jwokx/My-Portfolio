@@ -20,17 +20,11 @@
   <section id="Home" tabindex="-1" aria-labelledby="home-title">
     
     <h1 id="home-title">
-      Hello, I'm Jazz,<br>
-      a Junior Frontend <br>
-      Web <span>Developer</span>.
-    </h1>
+      HELLO, I'M <span>JAZZ</span>, A JUNIOR FRONTEND WEB DEVELOPE.</h1>
     
     <button onclick="location.href='#About'" class="category-button" aria-label="Learn More About Me">Learn More About Me</button>
     
-    <video width="640" height="360" autoplay muted loop>
-  <source src="42ad1af4-2ca9-4341-9df3-bf048bd5dd04.mp4" type="video/mp4">
- 
-</video>
+  
   </section>
 
   <nav>
@@ -52,11 +46,13 @@
       </svg>
     </div>
     <p class="about" data-aos="zoom-in">
-      Fully committed to the philosophy of life-long learning, I’m Jazz S. Cometa, an 18-year-old Junior Frontend Developer with a deep passion for creating visually appealing and user-friendly interfaces. I believe that continuous improvement and curiosity are essential in the ever-evolving field of web development.
+      Fully committed to the philosophy of life-long learning, I’m Jazz S. Cometa — an 18-year-old Junior Frontend Developer with a deep passion for creating visually appealing and user-friendly interfaces. I believe that continuous improvement and curiosity are essential in the ever-evolving field of web development.
 
 What excites me most is the unique blend of creativity, logic, and technology that web development offers. The constant opportunity to explore new tools, frameworks, and design trends keeps me motivated and inspired to grow as a developer.
 
 As a creative individual, I find joy in bringing ideas to life through both code and design. Whether it's building sleek, responsive layouts or enhancing user experience through thoughtful design choices, I take pride in crafting digital experiences that are both functional and beautiful.
+
+When I’m offline, you’ll probably find me vibing to my Spotify playlist while sketching, relaxing at the beach, or diving into new graphic design ideas — anything that lets me stay creative, even away from the screen.
     </p>
 <h4 data-aos="zoom-in">💻 Tech Stack</h4>
     <div class="badges" aria-label="Technology stack badges" data-aos="zoom-in">
@@ -105,18 +101,70 @@ As a creative individual, I find joy in bringing ideas to life through both code
 
 
   <section id="Project" tabindex="-1" aria-labelledby="project-title">
-    <h2 id="project-title" data-aos="zoom-in">PROJECT</h2>
+    <h2 id="project-title" data-aos="zoom-in">PROJECTS</h2>
+    <h3 id="project-title" data-aos="zoom-in">GRAPHIC DESIGN<span> SECTION</span>.</h3>
+<div class="container">
+  <a href="#" class="lightbox-trigger">
+    <img src="0 1.jpg" alt="Sample project" data-aos="zoom-in">
+  </a>
+  <a href="#" class="lightbox-trigger">
+    <img src="Add a heading.jpg" alt="Sample project" data-aos="zoom-in">
+  </a>
+  <a href="#" class="lightbox-trigger">
+    <img src="June 18,2025.jpg" alt="Sample project" data-aos="zoom-in">
+  </a>
+  <a href="#" class="lightbox-trigger">
+    <img src="Untitled design.jpg" alt="Sample project" data-aos="zoom-in">
+  </a>
+</div>
+
+<div id="lightbox-modal">
+  <span class="close">&times;</span>
+  <img id="lightbox-img" src="" alt="Expanded image">
+</div>
+
+<h5>
+  <a href="https://jwokx.github.io/DRAFTON/" target="_blank">Show More</a>
+</h5>
+
     <h3 id="project-title" data-aos="zoom-in">FRONDTEND <span>SECTION</span>.</h3>
     <div class="container">
       <a href="https://jwokx.github.io/DRAFTON/" target="_blank" >
       <img src="photoforport.jpg" alt="Sample project work screenshot" data-aos="zoom-in">
       </a>
+
+      <a href="https://jwokx.github.io/DRAFTON/" target="_blank" >
+      <img src="photoforport.jpg" alt="Sample project work screenshot" data-aos="zoom-in">
+      </a>
+
+      <a href="https://jwokx.github.io/DRAFTON/" target="_blank" >
+      <img src="photoforport.jpg" alt="Sample project work screenshot" data-aos="zoom-in">
+      </a>
     </div>
+
+   <h5>
+  <a href="https://jwokx.github.io/DRAFTON/" target="_blank" class="project-link">Show More</a>
+</h5>
     
     <h3 id="project-title" data-aos="zoom-in">UI/UX DESIGN<span> SECTION</span>.</h3>
-    <p data-aos="zoom-in">🚧 Coming Soon – A new feature is on the way. Stay tuned for updates! 🚧</p>
-    <h3 id="project-title" data-aos="zoom-in">GRAPGHIC<span> SECTION</span>.</h3>
-    <p data-aos="zoom-in">🚧 Coming Soon – A new feature is on the way. Stay tuned for updates! 🚧</p>
+    <div class="container">
+      <a href="https://jwokx.github.io/DRAFTON/" target="_blank" >
+      <img src="work1.png" alt="Sample project work screenshot" data-aos="zoom-in">
+      </a>
+
+      <a href="https://jwokx.github.io/DRAFTON/" target="_blank" >
+      <img src="work3.png" alt="Sample project work screenshot" data-aos="zoom-in">
+      </a>
+
+      <a href="https://jwokx.github.io/DRAFTON/" target="_blank" >
+      <img src="work2.png" alt="Sample project work screenshot" data-aos="zoom-in">
+      </a>
+    </div>
+
+    <h5>
+  <a href="https://jwokx.github.io/DRAFTON/" target="_blank">Show More</a>
+</h5>
+  
   </section>
 
   <section id="Contact" tabindex="-1" aria-labelledby="contact-title" >
@@ -143,6 +191,35 @@ As a creative individual, I find joy in bringing ideas to life through both code
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init();   
+</script>
+
+
+<script>
+  const lightboxLinks = document.querySelectorAll('.lightbox-trigger img');
+  const modal = document.getElementById('lightbox-modal');
+  const modalImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('#lightbox-modal .close');
+
+  lightboxLinks.forEach(img => {
+    img.addEventListener('click', function (e) {
+      e.preventDefault();
+      modal.style.display = 'flex';
+      modalImg.src = this.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', function () {
+    modal.style.display = 'none';
+    modalImg.src = '';
+  });
+
+  // Optional: close modal by clicking outside image
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      modalImg.src = '';
+    }
+  });
 </script>
 
 </body>
